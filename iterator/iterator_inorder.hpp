@@ -16,7 +16,7 @@ class InOrderIterator : public IteratorBinaryTreeBase<NodeT>
     public:
         InOrderIterator() = default;
 
-        InOrderIterator(std::shared_ptr<NodeT> root) : IteratorBinaryTreeBase<NodeT>(root) {
+        InOrderIterator(const std::shared_ptr<NodeT>& root) : IteratorBinaryTreeBase<NodeT>(root) {
 
         }
 

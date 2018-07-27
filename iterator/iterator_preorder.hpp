@@ -16,7 +16,7 @@ class PreOrderIterator : public IteratorBinaryTreeBase<NodeT>
     public:
         PreOrderIterator() = default;
 
-        PreOrderIterator(std::shared_ptr<NodeT> root) : IteratorBinaryTreeBase<NodeT>(root) {
+        PreOrderIterator(const std::shared_ptr<NodeT>& root) : IteratorBinaryTreeBase<NodeT>(root) {
 
         }
 

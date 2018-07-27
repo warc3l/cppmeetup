@@ -6,7 +6,7 @@
 #include "node.hpp"
 
 template<class NodeT = Node<int>>
-class IteratorBinaryTreeBase  : public std::iterator<std::forward_iterator_tag, int, NodeT, NodeT*, NodeT&>
+class IteratorBinaryTreeBase  /* : public std::iterator<std::forward_iterator_tag, int, NodeT, NodeT*, NodeT&> */ // Deprecating in C++17
 {
     protected:
         std::shared_ptr<NodeT> _current;
@@ -15,16 +15,15 @@ class IteratorBinaryTreeBase  : public std::iterator<std::forward_iterator_tag, 
 
     public:
         // To use STL features, as a forward iterator
-        /*
+
         using iterator_category = std::forward_iterator_tag;
         using value_type = NodeT;
         using difference_type = int;
         using pointer = NodeT*;
         using reference = NodeT&;
-        */
 
         IteratorBinaryTreeBase() = default;
-        IteratorBinaryTreeBase(std::shared_ptr<NodeT> root) {
+        IteratorBinaryTreeBase(const std::shared_ptr<NodeT>& root) {
             _current = root;
             _root = root;
             first = true;

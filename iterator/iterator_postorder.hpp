@@ -17,7 +17,7 @@ class PostOrderIterator : public IteratorBinaryTreeBase<NodeT>
     public:
         PostOrderIterator() = default;
 
-        PostOrderIterator(std::shared_ptr<NodeT> root) : IteratorBinaryTreeBase<NodeT>(root) {
+        PostOrderIterator(const std::shared_ptr<NodeT>& root) : IteratorBinaryTreeBase<NodeT>(root) {
 
         }
 
